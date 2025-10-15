@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить пользователя{% endblock %}
+
+{% block content %}
+    <h1>Форма добавления пользователя</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <form method="post">
+        <label>Имя: <input type="text" name="name"></label><br>
+        <label>Email: <input type="text" name="email"></label><br>
+        <input type="submit" value="Добавить">
+    </form>
+{% endblock %}

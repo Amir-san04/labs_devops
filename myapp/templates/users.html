@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Пользователи{% endblock %}
+
+{% block content %}
+    <h1>Список пользователей:</h1>
+    <ul>
+        {% for user in users %}
+            <li>ID: {{ user._id }} | Имя: {{ user.name }} | Email: {{ user.email }}</li>
+        {% endfor %}
+    </ul>
+    <p>Для JSON: добавьте ?format=json в URL.</p>
+{% endblock %}

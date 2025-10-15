@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Моё приложение{% endblock %}</title>
+    <style>
+        nav { background-color: #f0f0f0; padding: 10px; }
+        nav a { margin-right: 15px; text-decoration: none; color: blue; }
+        nav a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/about">О проекте</a>
+        <a href="/users">Пользователи</a>
+        <a href="/add">Добавить пользователя</a>
+        <a href="/delete">Удалить пользователя</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
